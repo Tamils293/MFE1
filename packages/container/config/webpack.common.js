@@ -1,6 +1,14 @@
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      scriptLoading: 'defer',
+      hash: true,
+    }),
+  ],
   target: "web",
   resolve: {
     fallback: {
